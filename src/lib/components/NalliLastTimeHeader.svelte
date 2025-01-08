@@ -5,10 +5,10 @@
 </script>
 
 <h1>
-  <u>{useBonedStore.data[0].by === People.Sid ? 'Sid' : 'Sumit'}</u> got nalli last time
+  <u>{useBonedStore.data[0]?.by === People.Sid ? 'Sid' : 'Sumit'}</u> got nalli last time
 </h1>
 
-<p>@{getMoment(useBonedStore.data[0].createdAt).format('DD MMM YYYY hh:mm:ss A')}</p>
+<p>@{getMoment(useBonedStore.data[0]?.createdAt).format('DD MMM YYYY hh:mm:ss A')}</p>
 
 <style lang="scss">
   h1 {
