@@ -32,7 +32,9 @@ function createBonedStore() {
       try {
         fetching = true;
 
-        data = await db.boned?.toArray();
+        const unorderedBoned = await db.boned?.toArray();
+
+        data = unorderedBoned.sort((a, b) => b.createdAt - a.createdAt);
 
         return Promise.resolve();
       } catch (e) {
@@ -51,10 +53,12 @@ function createBonedStore() {
         await db.boned.add({
           _id: nanoid(),
           by: person,
-          createdAt: new Date(),
+          createdAt: Date.now(),
         });
 
-        data = await db.boned?.toArray();
+        const unorderedBoned = await db.boned?.toArray();
+
+        data = unorderedBoned.sort((a, b) => b.createdAt - a.createdAt);
 
         return Promise.resolve();
       } catch (e) {
@@ -77,7 +81,9 @@ function createBonedStore() {
 
         await db.boned.delete(targetBook.id);
 
-        data = await db.boned?.toArray();
+        const unorderedBoned = await db.boned?.toArray();
+
+        data = unorderedBoned.sort((a, b) => b.createdAt - a.createdAt);
 
         return Promise.resolve();
       } catch (e) {
