@@ -34,7 +34,7 @@ function createBonedStore() {
 
         const unorderedBoned = await db.boned?.toArray();
 
-        data = unorderedBoned.sort((a, b) => b.createdAt - a.createdAt);
+        data = unorderedBoned?.sort((a, b) => b?.createdAt - a?.createdAt);
 
         return Promise.resolve();
       } catch (e) {
@@ -58,7 +58,7 @@ function createBonedStore() {
 
         const unorderedBoned = await db.boned?.toArray();
 
-        data = unorderedBoned;
+        data = unorderedBoned?.sort((a, b) => b?.createdAt - a?.createdAt);
 
         return Promise.resolve();
       } catch (e) {
@@ -83,7 +83,7 @@ function createBonedStore() {
 
         const unorderedBoned = await db.boned?.toArray();
 
-        data = unorderedBoned;
+        data = unorderedBoned?.sort((a, b) => b?.createdAt - a?.createdAt);
 
         return Promise.resolve();
       } catch (e) {
