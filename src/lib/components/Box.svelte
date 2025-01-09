@@ -13,7 +13,7 @@
 </div>
 
 <style lang="scss">
-  @import '$lib/components/GlobalContainer/styles/mixins/media.scss';
+  @use '$lib/components/GlobalContainer/styles/mixins/media.scss' as *;
 
   div {
     width: 100%;
