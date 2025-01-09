@@ -48,7 +48,7 @@
     tr {
       &:first-child {
         td {
-          color: var(--color-primary-700);
+          color: var(--color-primary-600);
         }
       }
     }

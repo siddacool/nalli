@@ -23,6 +23,6 @@
   }
 
   u {
-    color: var(--color-primary-700);
+    color: var(--color-primary-600);
   }
 </style>
