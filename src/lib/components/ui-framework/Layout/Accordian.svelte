@@ -6,7 +6,7 @@
   interface AccordianProps extends SvelteComponentProps {
     onclick?: (e: MouseEvent) => void;
     title: string;
-    class: string;
+    class?: string;
     open?: boolean;
     headerContent?: Snippet;
   }

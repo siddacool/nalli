@@ -1,4 +1,5 @@
 <script lang="ts">
+  import BonedList from '$lib/components/BonedList';
   import Box from '$lib/components/Box.svelte';
   import NalliLastTimeHeader from '$lib/components/NalliLastTimeHeader.svelte';
   import Button from '$lib/components/ui-framework/Form/Button.svelte';
@@ -25,6 +26,14 @@
         <Button variant="primary" onclick={() => useBonedStore.add(People.Sumit)}>Sumit</Button>
       </article>
     </section>
+
+    <br />
+
+    <hr />
+
+    <br />
+
+    <BonedList />
   </Box>
 {/if}
 
